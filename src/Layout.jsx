@@ -44,15 +44,15 @@ const Layout = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0D0B0A', color: '#F5F0EB' }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#ffffff', color: '#1a1a1a' }}>
       {/* Apple-inspired transparent nav */}
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
           backgroundColor: isScrolled
-            ? 'color-mix(in srgb, #0D0B0A 85%, transparent)'
+            ? 'rgba(255, 255, 255, 0.85)'
             : 'transparent',
-          borderBottom: isScrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
+          borderBottom: isScrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid transparent',
         }}
       >
         {/* Top blur layer */}
@@ -69,7 +69,7 @@ const Layout = () => {
                    style={{background: 'linear-gradient(135deg, #D4AF37, #B8960F)' }}>
                 LF
               </div>
-              <span className="text-lg font-semibold tracking-tight opacity-90 group-hover:opacity-100 transition-opacity"
+              <span className="text-lg font-semibold tracking-tight text-black group-hover:opacity-100 transition-opacity"
                     style={{fontFamily: 'Playfair Display, serif' }}>
                 Luz Ferrero
               </span>
@@ -84,7 +84,7 @@ const Layout = () => {
                   end={link.path === '/'}
                   className="relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-full"
                   style={({ isActive }) => ({
-                    color: isActive ? '#D4AF37' : 'rgba(255,255,255,0.65)',
+                    color: isActive ? '#D4AF37' : 'rgba(0,0,0,0.65)',
                     backgroundColor: isActive ? 'color-mix(in srgb, #D4AF37 12%, transparent)' : 'transparent',
                   })}
                 >
@@ -109,17 +109,17 @@ const Layout = () => {
             <div className="hidden md:flex items-center gap-3">
               <a
                 href="sms:+17862689486"
-                className="glass-card w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+                className="glass-card w-9 h-9 rounded-full flex items-center justify-center hover:bg-black/5 transition-all duration-300"
                 aria-label="Text me"
               >
-                <MessageCircle size={16} className="opacity-70" />
+                <MessageCircle size={16} className="opacity-70 text-black" />
               </a>
             </div>
 
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden relative z-50 w-10 h-10 rounded-full flex items-center justify-center glass-card hover:bg-white/10 transition-all"
+              className="md:hidden relative z-50 w-10 h-10 rounded-full flex items-center justify-center glass-card hover:bg-black/5 transition-all text-black"
               aria-label="Toggle menu"
             >
               <div className="relative w-5 h-5">
@@ -146,7 +146,7 @@ const Layout = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 md:hidden"
-            style={{ backgroundColor: '#0D0B0A' }}
+            style={{ backgroundColor: '#ffffff' }}
           >
             <div className="flex flex-col justify-center h-full px-8 pb-20">
               {navLinks.map((link, i) => (
@@ -163,12 +163,12 @@ const Layout = () => {
                     className="block py-4 text-3xl font-bold transition-all duration-300"
                     style={({ isActive }) => ({
                       fontFamily: 'Playfair Display, serif',
-                      color: isActive ? '#D4AF37' : 'rgba(255,255,255,0.7)',
+                      color: isActive ? '#D4AF37' : 'rgba(0,0,0,0.7)',
                     })}
                   >
                     {link.label}
                   </NavLink>
-                  <div className="h-px w-full" style={{ backgroundColor: 'rgba(255,255,255,0.06)' }} />
+                  <div className="h-px w-full" style={{ backgroundColor: 'rgba(0,0,0,0.06)' }} />
                 </motion.div>
               ))}
 
@@ -180,7 +180,7 @@ const Layout = () => {
               >
                 <a
                   href="sms:+17862689486"
-                  className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl font-semibold text-lg glass-card"
+                  className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl font-semibold text-lg glass-card text-black"
                 >
                   <MessageCircle size={20} />
                   <span>Text Me</span>
@@ -197,8 +197,8 @@ const Layout = () => {
       </main>
 
       {/* Apple-style minimal footer */}
-      <footer className="relative border-t" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <footer className="relative border-t" style={{ borderColor: 'rgba(0,0,0,0.06)', backgroundColor: '#f9f9f9' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 text-black">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Brand */}
             <div className="md:col-span-2 space-y-4">
@@ -264,7 +264,7 @@ const Layout = () => {
 
           {/* Copyright - minimal */}
           <div className="mt-12 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4"
-               style={{ borderColor: 'rgba(255,255,255,0.04)' }}>
+               style={{ borderColor: 'rgba(0,0,0,0.04)' }}>
             <p className="text-xs opacity-30">
               &copy; {new Date().getFullYear()} Luz Ferrero. All rights reserved.
             </p>

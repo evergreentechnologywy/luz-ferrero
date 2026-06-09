@@ -19,13 +19,13 @@ const pageVariants = {
 };
 
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#0D0B0A' }}>
+  <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#ffffff' }}>
     <div className="flex flex-col items-center gap-4">
       <div
         className="w-12 h-12 rounded-full border-2 border-t-transparent animate-spin"
         style={{ borderColor: '#D4AF37', borderTopColor: 'transparent' }}
       />
-      <div className="h-3 w-24 rounded-full" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }} />
+      <div className="h-3 w-24 rounded-full" style={{ backgroundColor: 'rgba(0,0,0,0.05)' }} />
     </div>
   </div>
 );

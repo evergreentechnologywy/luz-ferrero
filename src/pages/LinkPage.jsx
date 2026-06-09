@@ -28,7 +28,7 @@ const LinkPage = () => {
 
   const primaryColor = '#D4AF37';
   const secondaryColor = '#B8960F';
-  const bgColor = '#0D0B0A';
+  const bgColor = '#ffffff';
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-20"
@@ -49,7 +49,7 @@ const LinkPage = () => {
         >
           <div className="w-24 h-24 rounded-full p-[3px]"
                style={{ background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})` }}>
-            <div className="w-full h-full rounded-full overflow-hidden" style={{ backgroundColor: '#14141f' }}>
+            <div className="w-full h-full rounded-full overflow-hidden" style={{ backgroundColor: '#f0f0f0' }}>
               <img
                 src="https://imagedelivery.net/g6o8Tx3eMKIxUyYFM9y8TA/luz-ferrero-001/public"
                 alt="Luz Ferrero"
@@ -64,7 +64,7 @@ const LinkPage = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.5 }}
-          className="text-2xl font-bold text-white text-center mb-1"
+          className="text-2xl font-bold text-black text-center mb-1"
           style={{ fontFamily: 'Playfair Display, serif' }}
         >
           Luz Ferrero

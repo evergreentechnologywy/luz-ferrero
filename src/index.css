@@ -5,8 +5,8 @@
 :root {
   --primary: #D4AF37;
   --secondary: #B8960F;
-  --bg: #0D0B0A;
-  --text: #F5F0EB;
+  --bg: #ffffff;
+  --text: #1a1a1a;
   --gold: #D4AF37;
 }
 
@@ -37,11 +37,12 @@
     font-family: Playfair Display, serif;
     line-height: 1.1;
     letter-spacing: -0.02em;
+    color: #000000;
   }
 
   ::selection {
     background: color-mix(in srgb, var(--primary) 30%, transparent);
-    color: var(--text);
+    color: #ffffff;
   }
 
   :focus-visible {
@@ -69,30 +70,32 @@
 /* Apple-style glass morphism utilities */
 @layer components {
   .glass {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .glass-dark {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .glass-card:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.8);
     border-color: color-mix(in srgb, var(--primary) 30%, transparent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     transform: translateY(-2px);
   }
 

@@ -155,7 +155,7 @@ const Gallery = () => {
             {/* Backdrop */}
             <div
               className="absolute inset-0 backdrop-blur-2xl"
-              style={{ backgroundColor: 'color-mix(in srgb, #0D0B0A 95%, black)' }}
+              style={{ backgroundColor: '#ffffff' }}
               onClick={closeLightbox}
             />
 

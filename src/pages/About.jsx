@@ -22,7 +22,7 @@ const About = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0" style={{
-              background: 'linear-gradient(to right, transparent 50%, #0D0B0A 100%)',
+              background: 'linear-gradient(to right, transparent 50%, #ffffff 100%)',
             }} />
           </motion.div>
 
